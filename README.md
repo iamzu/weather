@@ -23,7 +23,7 @@ $weather = new Weather($key);
 ```
 ### 获取实时天气
 ```php
-$response = $weather->getWeather('深圳');
+$response = $weather->getLiveWeather('深圳');
 ```
 ### 示例
 ```
@@ -49,7 +49,7 @@ $response = $weather->getWeather('深圳');
 ```
 ### 获取近期天气预报
 ```php
-$response = $weather->getWeather('深圳', 'all');
+$response = $weather->getForecastsWeather('深圳', 'all');
 ```
 ### 实例
 ```
@@ -121,7 +121,7 @@ $response = $weather->getWeather('深圳', 'all');
 ### 获取 XML 格式返回值
 > 第三个参数为返回值类型，可选 json 与 xml，默认 json：
 ```php
-$response = $weather->getWeather('深圳', 'all', 'xml');
+$response = $weather->getLiveWeather('深圳', 'all', 'xml');
 ```
 ### 实例
 ```
@@ -147,7 +147,7 @@ $response = $weather->getWeather('深圳', 'all', 'xml');
 ```
 ### 参数说明
 ```
-array|string getWeather(string $city, string $type = 'base', string $format = 'json')
+array|string getLiveWeather|getForecastsWeather(string $city, string $format = 'json')
 ```
 ## 在 Laravel 中使用
 >在 `Laravel` 中使用也是同样的安装方式，配置写在 `config/services.php` 中：
@@ -165,14 +165,14 @@ WEATHER_API_KEY=xxxxxxxxxxxxxxxxxxxxx
 ```php
 public function edit(Weather $weather) 
 {
-    $response = $weather->getWeather('深圳');
+    $response = $weather->getLiveWeather('深圳');
 }
 ```
 >服务名访问
 ```php
 public function edit() 
 {
-    $response = app('weather')->getWeather('深圳');
+    $response = app('weather')->getLiveWeather('深圳');
 }
 ```
 ## 参考

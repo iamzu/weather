@@ -45,7 +45,7 @@ class Weather
      * @throws Exception
      * @return false|ResponseInterface|string
      */
-    public function getWeather($city,$type = 'base',$format = 'json')
+    private function getWeather($city,$type = 'base',$format = 'json')
     {
         $url = 'https://restapi.amap.com/v3/weather/weatherInfo';
 
@@ -72,6 +72,38 @@ class Weather
             return 'json' === $format ? json_encode($response, JSON_THROW_ON_ERROR) : $response;
         }catch (\Exception $e){
             var_dump($e->getMessage());
+            throw new HttpException($e->getMessage(),$e->getCode(),$e);
+        }
+    }
+
+    /**
+     * 获取实时天气
+     * @param  string|integer  $city
+     * @param  string  $format
+     * @throws HttpException
+     * @return false|ResponseInterface|string
+     */
+    public function getLiveWeather($city,$format = 'json')
+    {
+        try {
+            return $this->getWeather($city, 'base', $format);
+        } catch (Exception $e) {
+            throw new HttpException($e->getMessage(),$e->getCode(),$e);
+        }
+    }
+
+    /**
+     * 获取天气预报
+     * @param  string|integer  $city
+     * @param  string  $format
+     * @throws HttpException
+     * @return false|ResponseInterface|string
+     */
+    public function getForecastsWeather($city, $format = 'json')
+    {
+        try {
+            return $this->getWeather($city, 'all', $format);
+        } catch (Exception $e) {
             throw new HttpException($e->getMessage(),$e->getCode(),$e);
         }
     }
