@@ -170,7 +170,7 @@ public function edit(Weather $weather)
 ```
 >服务名访问
 ```php
- public function edit() 
+public function edit() 
 {
     $response = app('weather')->getWeather('深圳');
 }
