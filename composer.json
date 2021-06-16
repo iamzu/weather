@@ -1,0 +1,32 @@
+{
+    "name": "lsoex\/weather",
+    "description": "A Weather SDK",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "lsoex",
+            "email": "i@lsoex.com"
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "^6.5",
+        "ext-json": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Lsoex\\Weather\\": "src",
+            "Lsoex\\Weather\\Tests\\": "tests"
+        }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^6.5",
+        "mockery/mockery": "^1.3"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Overtrue\\Weather\\ServiceProvider"
+            ]
+        }
+    }
+}
