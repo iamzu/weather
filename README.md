@@ -175,10 +175,10 @@ public function edit()
     $response = app('weather')->getLiveWeather('深圳');
 }
 ```
-## 参考
-<a href="https://lbs.amap.com/api/webservice/guide/api/weatherinfo/">高德开放平台天气接口</a>
-## License
 
 ## 如果对你有帮助请star哦！✨
 
+## 参考
+<a href="https://lbs.amap.com/api/webservice/guide/api/weatherinfo/">高德开放平台天气接口</a>
+## License
 MIT
