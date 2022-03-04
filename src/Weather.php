@@ -1,12 +1,12 @@
 <?php
-namespace Lsoex\Weather;
+namespace Drizzle\Weather;
 
 
 
 use GuzzleHttp\Client;
-use  Lsoex\Weather\Exceptions\InvalidArgumentException;
-use Lsoex\Weather\Exceptions\Exception;
-use Lsoex\Weather\Exceptions\HttpException;
+use Drizzle\Weather\Exceptions\InvalidArgumentException;
+use Drizzle\Weather\Exceptions\Exception;
+use Drizzle\Weather\Exceptions\HttpException;
 use Psr\Http\Message\ResponseInterface;
 
 class Weather

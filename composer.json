@@ -1,11 +1,11 @@
 {
-    "name": "lsoex\/weather",
+    "name": "drizzle\/weather",
     "description": "A Weather SDK",
     "license": "MIT",
     "authors": [
         {
-            "name": "lsoex",
-            "email": "i@lsoex.com"
+            "name": "drizzle",
+            "email": "rn1408@126.com"
         }
     ],
     "require": {
@@ -14,8 +14,8 @@
     },
     "autoload": {
         "psr-4": {
-            "Lsoex\\Weather\\": "src",
-            "Lsoex\\Weather\\Tests\\": "tests"
+            "Drizzle\\Weather\\": "src",
+            "Drizzle\\Weather\\Tests\\": "tests"
         }
     },
     "require-dev": {

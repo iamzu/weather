@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Lsoex\Weather\Exceptions;
+namespace Drizzle\Weather\Exceptions;
 
 
 class InvalidArgumentException extends Exception

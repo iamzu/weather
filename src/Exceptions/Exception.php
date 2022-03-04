@@ -1,5 +1,5 @@
 <?php
-namespace Lsoex\Weather\Exceptions;
+namespace Drizzle\Weather\Exceptions;
 
 class Exception extends \Exception
 {

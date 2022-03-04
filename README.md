@@ -6,7 +6,7 @@
 ## 安装
 
 ```shell
-$ composer require lsoex/weather -vvv
+$ composer require drizzle/weather -vvv
 ```
 
 ## 配置
@@ -15,7 +15,7 @@ $ composer require lsoex/weather -vvv
 ## 使用
 
 ```php
-use Lsoex\Weather\Weather;
+use Drizzle\Weather\Weather;
 
 $key = 'xxxxxxxxxxxxxxxxxxxxxxxxxxx';
 

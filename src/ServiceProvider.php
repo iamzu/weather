@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Lsoex\Weather;
+namespace Drizzle\Weather;
 
 
 class ServiceProvider extends \Illuminate\Support\ServiceProvider
